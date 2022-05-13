@@ -1,0 +1,117 @@
+section .background {
+    position: relative;
+    background-image: url('/images/menu.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 22rem;
+
+
+
+}
+
+section .background h1 {
+    color: #fff;
+    font-size: 4rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 25rem;
+    padding-left: 5rem;
+    padding-top: 5rem;
+}
+
+section .background p {
+    color: #fff;
+    font-size: 3rem;
+    font-family: 'Ms Madi', cursive;
+    width: 30rem;
+    padding-left: 5rem;
+
+
+}
+
+.menu {
+    display: flex;
+}
+
+.menu-head {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.menu fieldset {
+    width: fit-content;
+    padding: 25px;
+    margin: 0 auto;
+    border: none;
+    border: 1px solid #777;
+    margin-bottom: 2rem;
+
+}
+
+.menu fieldset legend {
+    font-family: 'Italianno', cursive;
+    font-size: 3rem
+}
+
+.menu h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.menu-con {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-con .list-left {
+    display: flex;
+    width: 75rem;
+    flex-wrap: wrap;
+
+}
+
+.menu-con .list-left .menu-item {
+    display: flex;
+    /* margin-bottom: 2.5rem; */
+    margin-right: 6rem;
+}
+
+.menu-con .list-left .menu-item .menu-image {
+    margin-right: 2rem;
+}
+
+.menu-con .list-left .menu-item .menu-image img {
+    width: 160px;
+    height: 110px;
+}
+
+
+.menu-con .list-left .menu-item .menu-content {
+    margin-right: 4rem;
+}
+
+.menu-con .list-left .menu-item .menu-content h1 {
+    /* margin-right: 2rem; */
+}
+
+.menu-con .list-left .menu-item .menu-content p {
+    margin-top: .6rem;
+    font-size: 14px;
+}
+
+.menu-con .list-left .menu-item .menu-content button {
+    margin-top: 1.2rem;
+    border: none;
+    color: rgb(255, 183, 0);
+    border: 1px solid rgb(255, 183, 0);
+    background-color: transparent;
+    padding: 8px;
+    border-radius: .2rem;
+}
+
+.menu-con .list-left .menu-item .price p {
+    font-weight: bold;
+    font-size: 18px;
+
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/dashboard.css">
+</head>
+
+<body>
+    <section>
+        <div class="background">
+            <h1>Dashboard</h1>
+        </div>
+    </section>
+
+
+    <table id="orders" class="note-con">
+
+        <tr class="head-color">
+            <th>Order N0.</th>
+            <th>order Date</th>
+            <th>pickup</th>
+            <th>Food Name</th>
+            <th>Food Description</th>
+            <th>quantity</th>
+
+            <th>Action</th>
+        </tr>
+        <% orders.forEach(function(order){ %>
+            <tr>
+                <td>
+                    <%= order.order_num %>
+                </td>
+                <td>
+                    <%= order.order_date %>
+                </td>
+
+                <td>
+                    <%= order.pickup_time %>
+                </td>
+
+                <td>
+                    <%= order.food_nm %>
+                </td>
+                <td>
+                    <%= order.food_description%>
+                </td>
+
+                <td>
+                    <%= order.quantity%>
+                </td>
+
+
+
+                <td>
+                    <div class="action">
+                        <a href="">edit</a>
+                        <a href=">">delete</a>
+
+                    </div>
+                </td>
+            </tr>
+
+
+            <% }); %>
+
+    </table>
+
+
+
+
+</body>
+
+</html>

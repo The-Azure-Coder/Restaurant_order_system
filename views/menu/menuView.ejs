@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/menu.css">
+</head>
+
+<body>
+    <section>
+        <div class="background">
+            <h1>Morgana's Menu </h1>
+            <p>Take a bite of heaven</p>
+        </div>
+    </section>
+
+    <h2 class="menu-head">Explore Our menu</h2>
+
+    <% categories.forEach(category=>{ %>
+        <section class="menu">
+            <fieldset>
+                <legend>
+                    <%=category %>
+                </legend>
+                <div class="menu-con">
+                    <div class="list-left">
+                        <% items.forEach(item=>{ %>
+                            <% if(item.type==category){ %>
+
+                                <div style="margin-bottom: 2rem;" class="menu-item">
+                                    <div class="menu-image">
+                                        <img src="<%=item.image%>" alt="">
+                                    </div>
+                                    <div class="menu-content">
+                                        <h1>
+                                            <%=item.food_nm%>
+                                        </h1>
+                                        <p>
+                                            <%=item.food_description%>
+                                        </p>
+                                        <button>Order Now</button>
+                                    </div>
+                                    <div class="price">
+                                        <p>
+                                            <%=item.price%>
+                                        </p>
+                                    </div>
+                                </div>
+                                <% } %>
+                                    <% } )%>
+
+                    </div>
+
+                </div>
+            </fieldset>
+        </section>
+
+        <% }) %>
+
+</body>
+
+</html>
