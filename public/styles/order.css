@@ -16,7 +16,7 @@
     background-position: center;
     background-size: cover;
     width: 35rem;
-    height: 45rem;
+    height: 30rem;
 }
 
 
@@ -46,31 +46,47 @@
     border: none;
     border: 1px solid rgb(153, 152, 152);
     display: block;
-    width: 12rem;
+    width: 28rem;
     padding: 15px;
     border-radius: .2rem;
     margin-bottom: 1rem;
+}
+
+
+.login-con .login-form .check {
+
+    margin-top: .4rem;
+    padding-bottom: 10px;
+}
+
+.login-con .login-form .check span input {
+    display: inline;
+    color: red;
+    padding: 0px;
+    width: 2rem;
 }
 
 .login-con .login-form select {
     border: none;
     border: 1px solid rgb(153, 152, 152);
     display: block;
-    width: 30rem;
+    width: 20rem;
     padding: 18px;
     border-radius: .2rem;
     margin-bottom: 1rem;
+    margin-right: 6rem;
 }
 
-.login-con .login-form .qty {
-    border: none;
-    border: 1px solid rgb(153, 152, 152);
-    display: block;
-    width: 27.5rem;
-    padding: 18px;
-    border-radius: .2rem;
-    margin-bottom: 1rem;
+.select-con {
+    display: flex;
+    align-items: center;
 }
+
+.select-con .quan input {
+    width: 1.8rem;
+    padding: 18px;
+}
+
 
 .login-con .login-form .account {
     margin-left: 2rem;
@@ -89,9 +105,7 @@
 
 }
 
-.login-form .personal {
-    display: flex;
-}
+
 
 .login-form .personal .info1 {
 

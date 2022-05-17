@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <link rel="stylesheet" href="/styles/dashboard.css">
+
 </head>
 
 <body>
@@ -21,10 +23,9 @@
 
         <tr class="head-color">
             <th>Order N0.</th>
+            <th>Email</th>
             <th>order Date</th>
-            <th>pickup</th>
-            <th>Food Name</th>
-            <th>Food Description</th>
+            <th>Food Ordered</th>
             <th>quantity</th>
 
             <th>Action</th>
@@ -34,27 +35,21 @@
                 <td>
                     <%= order.order_num %>
                 </td>
+
+                <td>
+                    <%= order.email %>
+                </td>
                 <td>
                     <%= order.order_date %>
                 </td>
 
                 <td>
-                    <%= order.pickup_time %>
-                </td>
-
-                <td>
-                    <%= order.food_nm %>
-                </td>
-                <td>
-                    <%= order.food_description%>
+                    <%= order.ordered_foodItem %>
                 </td>
 
                 <td>
                     <%= order.quantity%>
                 </td>
-
-
-
                 <td>
                     <div class="action">
                         <a href="">edit</a>

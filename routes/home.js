@@ -9,14 +9,9 @@ router.use(bodyparser.urlencoded({ extended: true })); // for parsing applicatio
 
 router.get('/', (req, res) => {
     if (req.session.loggedin === true) {
-
         res.render('home',
             {
                 user_session: req.session,
-                page_title: "Amber Cohort 2 - Home Page",
-                // user_f_name: req.session.frst_nm,
-                // user_l_name: req.session.last_nm,
-                // user_is_admin: req.session.is_admin
 
             });
         // console.log(req.session);

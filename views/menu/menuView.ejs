@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/styles/menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="/scripts/script.js"></script>
 </head>
 
 <body>
@@ -16,6 +18,27 @@
             <p>Take a bite of heaven</p>
         </div>
     </section>
+
+    <div class="cart-con">
+        <div id="close-cart-btn" class="fas fa-times"></div>
+
+        <section class="container content-section">
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price"></span>
+            </div>
+            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+        </section>
+
+    </div>
 
     <h2 class="menu-head">Explore Our menu</h2>
 
@@ -32,19 +55,19 @@
 
                                 <div style="margin-bottom: 2rem;" class="menu-item">
                                     <div class="menu-image">
-                                        <img src="<%=item.image%>" alt="">
+                                        <img class="shop-item-image" src="<%=item.image%>" alt="">
                                     </div>
                                     <div class="menu-content">
-                                        <h1>
+                                        <h1 class="shop-item-title">
                                             <%=item.food_nm%>
                                         </h1>
-                                        <p>
+                                        <p class="shop-item-des">
                                             <%=item.food_description%>
                                         </p>
-                                        <button>Order Now</button>
+                                        <a class='order-btn shop-item-button'>Order Now</a>
                                     </div>
                                     <div class="price">
-                                        <p>
+                                        <p class="shop-item-price">
                                             <%=item.price%>
                                         </p>
                                     </div>
