@@ -25,7 +25,26 @@ router.get('/', (req, res) => {
 
     })
 
+})
 
+router.post('/add', (req, res) => {
+    let rand_num = Math.floor((Math.random() * 2000) + 1000);
+    console.log(rand_num);
+
+    let cartData = {
+        order_num: rand_num,
+        ordered_item: req.body.ordered_item,
+        price: req.body.price,
+        total: req.body.total,
+        quantity: req.body.quantity,
+        payment_dt: req.body.payment_dt
+    };
+
+    let Query = "INSERT INTO checkout SET ?";
+    db.query(Query, cartData, (err, Results) => {
+        if (err) throw err;
+        res.redirect('checkout/cart')
+    })
 
 })
 

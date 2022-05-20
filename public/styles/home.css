@@ -113,6 +113,7 @@ section .background button {
 
 
 .footer {
+    padding-top: 2rem;
     background-color: #1f1f1f;
     display: flex;
     justify-content: center;

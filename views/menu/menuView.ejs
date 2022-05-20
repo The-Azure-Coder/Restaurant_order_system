@@ -19,6 +19,7 @@
         </div>
     </section>
 
+
     <div class="cart-con">
         <div id="close-cart-btn" class="fas fa-times"></div>
 
@@ -33,12 +34,12 @@
             </div>
             <div class="cart-total">
                 <strong class="cart-total-title">Total</strong>
-                <span class="cart-total-price"></span>
+                <input name="total" class="cart-total-price" type="text">
             </div>
-            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+            <button class="btn btn-primary btn-purchase" type="submit">PURCHASE</button>
         </section>
-
     </div>
+    </form>
 
     <h2 class="menu-head">Explore Our menu</h2>
 
@@ -50,7 +51,7 @@
                 </legend>
                 <div class="menu-con">
                     <div class="list-left">
-                        <% items.forEach(item=>{ %>
+                        <% items.forEach((item)=>{ %>
                             <% if(item.type==category){ %>
 
                                 <div style="margin-bottom: 2rem;" class="menu-item">
