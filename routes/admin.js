@@ -23,4 +23,16 @@ router.get('/', (req, res) => {
     }
 })
 
+
+router.get('/delete/:id', (req, res) => {
+    let id = req.params.id
+    query = `DELETE FROM amberapp3.orders WHERE id = ${id}`
+    db.query(query, (err, rows) => {
+        if (err) throw err;
+        res.redirect('/admin')
+    })
+
+
+})
+
 module.exports = router

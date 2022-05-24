@@ -27,7 +27,7 @@ app.use(session({
     secret: 'secREt$#code$%3245',
     resave: false,
     saveUninitialized: true,
-    cookie: { maxAge: 120000 }
+    cookie: { maxAge: 1200000 }
 }))
 
 var homeRouter = require('./routes/home')
@@ -36,6 +36,7 @@ var OrderRouter = require('./routes/order')
 var menuRouter = require('./routes/menu')
 var cartRouter = require('./routes/checkout')
 var adminRouter = require('./routes/admin')
+var statusRouter = require('./routes/status')
 
 
 
@@ -45,6 +46,7 @@ app.use('/order', OrderRouter)
 app.use('/menu', menuRouter)
 app.use('/cart', cartRouter)
 app.use('/admin', adminRouter)
+app.use('/status', statusRouter)
 
 
 
@@ -56,7 +58,7 @@ db.connect((err) => {
 
 })
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 app.listen(port, () => console.log(`Listening on port ${port}..`));
 
 module.exports = app;

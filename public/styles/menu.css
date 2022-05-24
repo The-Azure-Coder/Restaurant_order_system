@@ -148,6 +148,9 @@ section .background p {
     color: #333;
 }
 
+
+
+
 .cart-column {
     display: flex;
     align-items: center;
@@ -163,6 +166,7 @@ section .background p {
 
 .cart-item {
     width: 45%;
+    display: flex;
 }
 
 .cart-price {

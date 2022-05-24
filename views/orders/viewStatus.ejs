@@ -14,7 +14,7 @@
 <body>
     <section>
         <div class="background">
-            <h1>Dashboard</h1>
+            <h1>Your Orders</h1>
         </div>
     </section>
 
@@ -30,9 +30,6 @@
             <th>quantity</th>
             <th>Total</th>
             <th>Status</th>
-           
-
-            <th>Action</th>
         </tr>
         <% orders.forEach(function(order){ %>
             <tr>
@@ -64,16 +61,10 @@
                 </td>
 
                 <td>
-                    <select name="" id="">
+                    <!-- <select name="" id="">
                         <option value="">Pending</option>
                         <option value="">Processed</option>
-                    </select>
-                </td>
-                <td>
-                    <div class="action">
-                        <a href="admin/delete/<%=order.id%>">Delete</a>
-
-                    </div>
+                    </select> -->
                 </td>
             </tr>
 

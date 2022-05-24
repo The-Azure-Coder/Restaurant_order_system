@@ -27,25 +27,44 @@ router.get('/', (req, res) => {
 
 })
 
-router.post('/add', (req, res) => {
+router.get('/your-order/:id', (req, res) => {
+    let id = req.params.id;
     let rand_num = Math.floor((Math.random() * 2000) + 1000);
-    console.log(rand_num);
+    let sqlQuery = `SELECT * FROM amberapp3.menu WHERE id = ${id}`
 
-    let cartData = {
-        order_num: rand_num,
-        ordered_item: req.body.ordered_item,
-        price: req.body.price,
-        total: req.body.total,
-        quantity: req.body.quantity,
-        payment_dt: req.body.payment_dt
-    };
+    db.query(sqlQuery, (err, rows) => {
+        if (err) {
 
-    let Query = "INSERT INTO checkout SET ?";
-    db.query(Query, cartData, (err, Results) => {
-        if (err) throw err;
-        res.redirect('checkout/cart')
+        } else {
+            res.render('checkout/cart', {
+                foodItem: rows[0],
+                order_num: rand_num
+            })
+        }
+
+        console.log(rows)
+
     })
 
+
+})
+
+router.post('/add', (req, res) => {
+    let cartData = {
+        order_num: req.body.order_num,
+        order_date: new Date(Date.now()),
+        quantity: req.body.quantity,
+        food_nm: req.body.food_nm,
+        food_description: req.body.food_description,
+        price: req.body.price,
+        total: req.body.total
+    };
+
+    let Query = "INSERT INTO orders SET ?";
+    db.query(Query, cartData, (err, Results) => {
+        if (err) throw err;
+        res.redirect('/admin')
+    })
 })
 
 module.exports = router

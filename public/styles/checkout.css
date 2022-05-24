@@ -18,3 +18,57 @@ section .background h1 {
     padding-left: 5rem;
     padding-top: 7rem;
 }
+
+.card {
+    box-shadow: 10px 10px 28px -9px rgba(181, 165, 165, 0.52);
+    -webkit-box-shadow: 10px 10px 28px -9px rgba(181, 165, 165, 0.52);
+    -moz-box-shadow: 10px 10px 28px -9px rgba(181, 165, 165, 0.52);
+    display: flex;
+    margin: 2rem auto 2rem;
+    width: fit-content;
+}
+
+.image img {
+    height: 33rem;
+    width: 28rem;
+    display: block;
+    object-fit: cover;
+}
+
+.sep {
+    display: flex;
+
+}
+
+.sep .num {
+    margin-right: 2rem;
+
+}
+
+.sep input {
+    width: 10rem;
+}
+
+.content {
+    width: 28rem;
+    height: 30rem;
+    padding: 20px;
+}
+
+label {
+    display: block;
+
+}
+
+input {
+    padding: 15px;
+    display: block;
+    width: 24rem;
+    margin-bottom: 1.5rem;
+
+}
+
+[type=submit] {
+
+    margin-left: 1.1rem;
+}

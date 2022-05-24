@@ -19,11 +19,11 @@
         </div>
     </section>
 
-
+<form action="">
     <div class="cart-con">
         <div id="close-cart-btn" class="fas fa-times"></div>
-
-        <section class="container content-section">
+<form>
+      <section class="container content-section">
             <div class="cart-row">
                 <span class="cart-item cart-header cart-column">ITEM</span>
                 <span class="cart-price cart-header cart-column">PRICE</span>
@@ -42,7 +42,7 @@
     </form>
 
     <h2 class="menu-head">Explore Our menu</h2>
-
+<!-- <form action="menu/edit" method="post"> -->
     <% categories.forEach(category=>{ %>
         <section class="menu">
             <fieldset>
@@ -65,7 +65,7 @@
                                         <p class="shop-item-des">
                                             <%=item.food_description%>
                                         </p>
-                                        <a class='order-btn shop-item-button'>Order Now</a>
+                                        <a href="/menu/your-order/<%=item.id%>" class='order-btn shop-item-button'>Order Now</a>
                                     </div>
                                     <div class="price">
                                         <p class="shop-item-price">
@@ -80,9 +80,11 @@
 
                 </div>
             </fieldset>
-        </section>
+        </section>`
 
         <% }) %>
+
+<!-- </form> -->
 
 </body>
 

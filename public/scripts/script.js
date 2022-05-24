@@ -1,57 +1,26 @@
 
-// function checkfunction() {
-//     var check1 = document.getElementById("check1");
-//     var check2 = document.getElementById("check2");
-//     var check3 = document.getElementById("check3");
-//     var check4 = document.getElementById("check4");
-//     var start = document.getElementById("start");
-//     var main = document.getElementById("main");
-//     var dessert = document.getElementById("dessert");
-//     var drinks = document.getElementById("drinks");
-//     if (check1.checked == true) {
-//         start.style.display = "flex";
-//     } else if (check1.checked == false) {
-//         start.style.display = "none";
-
-//     }
-
-//     if (check2.checked == true) {
-//         main.style.display = "flex";
-
-//     } else if (check2.checked == false) {
-//         main.style.display = "none";
-
-//     }
-
-//     if (check3.checked == true) {
-//         dessert.style.display = "flex";
-
-//     } else if (check3.checked == false) {
-//         dessert.style.display = "none";
-
-//     }
-
-//     if (check4.checked == true) {
-//         drinks.style.display = "flex";
-
-//     } else if (check4.checked == false) {
-//         drinks.style.display = "none";
-
-//     }
 
 
-// }
+function priceTotal() {
+    var qty = parseInt(document.getElementById('qty').value)
+    var price = parseFloat(document.getElementById('price').value)
+    if (total == 0) {
+        total = price
+    } else {
+        var total = price * qty
+        document.getElementById("total").value = total;
+    }
+}
+
 window.onload = () => {
-
     var loginForm = document.querySelector('.cart-con');
-
     document.querySelector('#cart-btn').onclick = () => {
         loginForm.classList.toggle('active');
     }
     document.querySelector('#close-cart-btn').onclick = () => {
         loginForm.classList.remove('active');
-    }
 
+    }
 
 
 
@@ -62,6 +31,10 @@ window.onload = () => {
     } else {
         ready()
     }
+
+
+
+
 
     function ready() {
         var removeCartItemButtons = document.getElementsByClassName('btn-danger')
@@ -112,7 +85,6 @@ window.onload = () => {
         var button = event.target
         var shopItem = button.parentElement.parentElement;
         // console.log(shopItem);
-
         var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
         var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
         var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
@@ -132,13 +104,12 @@ window.onload = () => {
             }
         }
         var cartRowContents = `
-        <form action="/menu/add" method="post">
         <div class="cart-item cart-column">
             <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
-            <input name="ordered_item" class="cart-item-title" type="text" value="${title}" readonly>
+            <input id='itemTitle' name="ordered_item" class="cart-item-title" type="text" value="${title}" readonly>
             
         </div>
-        <input name="price" class="cart-price cart-column" readonly type="text" value="${price}">
+        <input id='itemPrice' name="price" class="cart-price cart-column" readonly type="text" value="${price}">
         <div class="cart-quantity cart-column">
             <input name="quantity" class="cart-quantity-input" type="number" value="1">
             <button class="btn btn-danger" type="button">X</button>
